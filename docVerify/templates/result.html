@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discrepancies Found</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .highlight {
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .discrepancy-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .upload-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Summary of PDF</h1>
+            <p class="lead">{{ summary }}</p>
+        </div>
+
+        <h1>Discrepancies Found</h1>
+        <ul class="list-group discrepancy-list">
+            {% for discrepancy in discrepancies %}
+                <li class="list-group-item" style="background-color: {{ discrepancy.color }}">
+                    <strong>Source:</strong> <a href="{{ discrepancy.source }}" target="_blank">{{ discrepancy.source }}</a><br>
+                    <strong>Summary Text:</strong> <span class="highlight">{{ discrepancy.summary_text }}</span><br>
+                    <strong>Web Text:</strong> <span class="highlight">{{ discrepancy.web_text }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <a class="btn btn-primary upload-link" href="{{ url_for('upload_file') }}">Upload another file</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

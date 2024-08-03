@@ -1,0 +1,3 @@
+# ignore venv and other files
+/venv/
+.DS_STORE

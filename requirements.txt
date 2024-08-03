@@ -1,0 +1,8 @@
+transformers
+PyMuPDF
+googlesearch-python
+beautifulsoup4
+requests
+Flask
+torch
+nltk
