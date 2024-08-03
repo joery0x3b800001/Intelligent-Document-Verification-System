@@ -27,7 +27,6 @@ The Intelligent Document Verification System is a web application that allows us
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/joery0x3b800001/Intelligent-Document-Verification-System.git
-   
    cd intelligent-document-verification-system
    ```
 
