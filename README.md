@@ -54,8 +54,8 @@ The Intelligent Document Verification System is a web application that allows us
          /templates
             index.html
             result.html
-      /static
-      app.py
+         /static
+         app.py
    ```
 
    - **`/docVerify/`**: The root directory of the Flask application.
