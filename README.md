@@ -65,14 +65,11 @@ The Intelligent Document Verification System is a web application that allows us
    - **`/static/`**: Directory for static files (e.g., CSS, JavaScript).
    - **`app.py`**: The main Flask application file.
 
-
-
 6. **Run the Application:**
    ```bash
    python app.py
    ```
    The application will start and be accessible at `http://127.0.0.1:5000`.
-
 
 ## Usage
 
